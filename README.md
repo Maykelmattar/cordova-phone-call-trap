@@ -7,12 +7,10 @@ The original dint have the capacity to receive the calling number and I was too 
 
 ## Install
 
-    $ cordova plugin add cozzbie.plugin.phonecalltrap
+    $ cordova plugin add tcg.plugin.phonecalltrap
 
 
 ## Quick Example
-    Angular 1: var PhoneCallTrap = cordova.plugins.PhoneCallTrap;
-    Angular 2: declare var PhoneCallTrap:any;
 
     PhoneCallTrap.onCall(function(obj) {
         

@@ -1,22 +1,23 @@
 {
-  "name": "cozzbie.plugin.phonecalltrap",
+  "name": "tcg.plugin.phonecalltrap",
   "version": "0.1.2",
   "description": "A phone call trap",
   "cordova": {
-    "id": "cozzbie.plugin.phonecalltrap",
+    "id": "tcg.plugin.phonecalltrap",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cozzbie/cordova-phone-call-trap.git"
+    "url": "git+https://github.com/the-control-group/cordova-phone-call-trap.git"
   },
   "keywords": [
     "phonegap",
     "calendar",
     "phone",
     "call",
+    "incoming-call",
     "phone-call",
     "ringing",
     "phone-state",
@@ -24,10 +25,10 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "Timi Aiyemo",
+  "author": "Mehmet Koc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cozzbie/cordova-phone-call-trap.git/issues"
+    "url": "https://github.com/the-control-group/cordova-phone-call-trap.git/issues"
   },
-  "homepage": "https://github.com/cozzbie/cordova-phone-call-trap.git#readme"
+  "homepage": "https://github.com/the-control-group/cordova-phone-call-trap.git#readme"
 }
