@@ -66,8 +66,8 @@ class CallStateListener extends PhoneStateListener {
         JSONObject jso = new JSONObject();
         String outpool = "";
         //JSONArray msgJSON = new JSONArray();
-        String number="muky";
-     // number=number+intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
+      //  String number="muky";
+     String number=intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
         try{
             jso.put("state", msg);
             jso.put("incomingNumber", number);
