@@ -59,6 +59,7 @@ class CallStateListener extends PhoneStateListener {
             break;
 
             case TelephonyManager.CALL_STATE_RINGING:
+                    String number = incomingNumber;
             msg = "RINGING";
             break;
         }
@@ -70,10 +71,10 @@ class CallStateListener extends PhoneStateListener {
   //   String number=intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
         try{
             jso.put("state", msg);
-            jso.put("incomingNumber", incomingNumber);
+            jso.put("incomingNumber", number);
             outpool = jso.toString();
         }catch(JSONException e){
-            outpool = "{state: '" + msg + "', incomingNumber: '" + incomingNumber + "'}";
+            outpool = "{state: '" + msg + "', incomingNumber: '" + number + "'}";
         }
 
         PluginResult result = new PluginResult(PluginResult.Status.OK, outpool);
