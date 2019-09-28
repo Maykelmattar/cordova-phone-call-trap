@@ -36,38 +36,7 @@ public class PhoneCallTrap extends CordovaPlugin {
 }
 
 class CallStateListener extends PhoneStateListener {
-public class PhoneCallReceiver extends BroadcastReceiver {
- Context context = null;
- private static final String TAG = "Phone call";
- private ITelephony telephonyService;
 
-@Override
- public void onReceive(Context context, Intent intent) {
-  if (!intent.getAction().equals("android.intent.action.PHONE_STATE")) 
-    return;
-
-//  Log.v(TAG, "Receving....");
-  TelephonyManager telephony = (TelephonyManager) 
-  context.getSystemService(Context.TELEPHONY_SERVICE);  
-  try {
-      Log.v(TAG, "Get getTeleService...");
-      Class c = Class.forName(telephony.getClass().getName());
-      Method m = c.getDeclaredMethod("getITelephony");
-      m.setAccessible(true);
-      telephonyService = (ITelephony) m.invoke(telephony);
-      telephonyService.silenceRinger();
-     // Log.v(TAG, "Answering Call now...");
-      telephonyService.answerRingingCall();
-     // Log.v(TAG, "Call answered...");
-      //telephonyService.endCall();
-  } catch (Exception e) {
-   e.printStackTrace();
- //  Log.e(TAG,
-  //         "FATAL ERROR: could not connect to telephony subsystem");
-  // Log.e(TAG, "Exception object: " + e);
-  }
- }
-}
     private CallbackContext callbackContext;
 
     public void setCallbackContext(CallbackContext callbackContext) {
