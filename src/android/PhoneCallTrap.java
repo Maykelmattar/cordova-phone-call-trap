@@ -7,7 +7,6 @@ import android.content.Context;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.content.BroadcastReceiver;
-import eu.chainfire.libsuperuser.Shell;
 
 import org.json.JSONException;
 import org.json.JSONArray;
@@ -63,7 +62,6 @@ String number= " ";
             case TelephonyManager.CALL_STATE_RINGING:
                 number = incomingNumber;
             msg = "RINGING";
-                 Shell.SU.run("am broadcast -a android.intent.action.AIRPLANE_MODE --ez state true");
                 break;
         }
 
