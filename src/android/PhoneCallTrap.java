@@ -61,15 +61,7 @@ String number= " ";
             case TelephonyManager.CALL_STATE_RINGING:
                 number = incomingNumber;
             msg = "RINGING";
-    try {
-        boolean isEnabled = Settings.System.getInt(getContentResolver(),Settings.System.AIRPLANE_MODE_ON, 0) == 1;
-        Settings.System.putInt(getContentResolver(),Settings.System.AIRPLANE_MODE_ON, isEnabled ? 0 : 1);
-        Intent intent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-        intent.putExtra("state", !isEnabled);
-        sendBroadcast(intent);
-    } catch (Exception e) {
-        Toast.makeText(this, "exception:" + e.toString(), Toast.LENGTH_LONG).show();
-    }
+
                 break;
         }
 
