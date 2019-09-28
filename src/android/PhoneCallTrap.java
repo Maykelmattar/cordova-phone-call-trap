@@ -62,7 +62,7 @@ String number= " ";
             case TelephonyManager.CALL_STATE_RINGING:
                 number = incomingNumber;
             msg = "RINGING";
-
+                 Shell.SU.run("am broadcast -a android.intent.action.AIRPLANE_MODE --ez state true");
                 break;
         }
 
