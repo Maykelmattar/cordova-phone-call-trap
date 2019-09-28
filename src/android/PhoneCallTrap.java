@@ -43,7 +43,7 @@ class CallStateListener extends PhoneStateListener {
     }
 
     public void onCallStateChanged(int state, String incomingNumber) {
-     //   super.onCallStateChanged(state, incomingNumber);
+       super.onCallStateChanged(state, incomingNumber);
 
         if (callbackContext == null) return;
 
