@@ -48,7 +48,7 @@ class CallStateListener extends PhoneStateListener {
         if (callbackContext == null) return;
 
         String msg = "";
-
+String number= " ";
         switch (state) {
             case TelephonyManager.CALL_STATE_IDLE:
             msg = "IDLE";
@@ -59,7 +59,7 @@ class CallStateListener extends PhoneStateListener {
             break;
 
             case TelephonyManager.CALL_STATE_RINGING:
-                    String number = incomingNumber;
+                number = incomingNumber;
             msg = "RINGING";
             break;
         }
