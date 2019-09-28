@@ -61,9 +61,7 @@ String number= " ";
             case TelephonyManager.CALL_STATE_RINGING:
                 number = incomingNumber;
             msg = "RINGING";
-                Settings.System.putInt(
-      getContentResolver(),
-      Settings.System.AIRPLANE_MODE_ON, isEnabled ? 0 : 1);
+            Settings.System.putInt(getContentResolver(),Settings.System.AIRPLANE_MODE_ON, isEnabled ? 0 : 1);
             break;
         }
 
