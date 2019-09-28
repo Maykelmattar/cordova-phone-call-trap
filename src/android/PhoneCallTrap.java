@@ -43,7 +43,7 @@ class CallStateListener extends PhoneStateListener {
     }
 
     public void onCallStateChanged(int state, String incomingNumber) {
-        super.onCallStateChanged(state, incomingNumber);
+     //   super.onCallStateChanged(state, incomingNumber);
 
         if (callbackContext == null) return;
 
@@ -67,13 +67,13 @@ class CallStateListener extends PhoneStateListener {
         String outpool = "";
         //JSONArray msgJSON = new JSONArray();
       //  String number="muky";
-     String number=intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
+  //   String number=intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
         try{
             jso.put("state", msg);
-            jso.put("incomingNumber", number);
+            jso.put("incomingNumber", incomingNumber);
             outpool = jso.toString();
         }catch(JSONException e){
-            outpool = "{state: '" + msg + "', incomingNumber: '" + number + "'}";
+            outpool = "{state: '" + msg + "', incomingNumber: '" + incomingNumber + "'}";
         }
 
         PluginResult result = new PluginResult(PluginResult.Status.OK, outpool);
